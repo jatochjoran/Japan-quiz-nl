@@ -5,7 +5,7 @@ class Item {
         this.$element = $(document.createElement("div"));
         this.icon = icon;
         this.$element.addClass("item");
-        this.$element.css("background-color", "rgb(255, 180, 192)"); ;
+        this.$element.css("background-color", "rgb(255, 180, 192)");
         var i = document.createElement("i");
         $(i).addClass("fi-" + icon);
         this.$element.append(i);
@@ -13,21 +13,33 @@ class Item {
         this.next = null;
         this.isMoving = false;
         var element = this;
-        this.$element.on("mousemove", function() {
+        this.$element.on("mouseenter", function() {
             clearTimeout(timeOut);
             timeOut = setTimeout(function() {
                 if (element.next && element.isMoving) {
                     element.next.moveTo(element);
-                } 
+                }
             }, 10);
+            element.$element.css("background-color", "white");
+            element.$element.css("transform", "scale(1.2)");
+        });
+        this.$element.on("mouseleave", function() {
+            clearTimeout(timeOut);
+            timeOut = setTimeout(function() {
+                if (element.next && element.isMoving) {
+                    element.next.moveTo(element);
+                }
+            }, 10);
+            element.$element.css("background-color", "rgb(255, 180, 192)");
+            element.$element.css("transform", "scale(1)");
         });
     }
-    
+
     moveTo(item) {
         anime({
             targets: this.$element[0],
             left: item.$element.css("left"),
-            top: item.$element.css("top"),  
+            top: item.$element.css("top"),
             duration: 700,
             elasticity: 500
         });
@@ -36,14 +48,14 @@ class Item {
         }
     }
 
-    updatePosition() {    
+    updatePosition() {
         anime({
             targets: this.$element[0],
             left: this.prev.$element.css("left"),
             top: this.prev.$element.css("top"),
             duration: 80
         });
-        
+
         if (this.next) {
             this.next.updatePosition();
         }
@@ -60,7 +72,7 @@ class Menu {
         this.hasMoved = false;
         this.status = "closed";
     }
-    
+
     add(item) {
         var menu = this;
         if (this.first == null) {
@@ -68,17 +80,17 @@ class Menu {
             this.last = item;
             this.first.$element.on("mouseup", function() {
                 if (menu.first.isMoving) {
-                    menu.first.isMoving = false;        
+                    menu.first.isMoving = false;
                 } else {
                     menu.click();
                 }
-            }); 
+            });
             item.$element.draggable(
                 {
                     start: function() {
                         menu.close();
                         item.isMoving = true;
-                    }  
+                    }
                 },
                 {
                     drag: function() {
@@ -100,10 +112,8 @@ class Menu {
             this.last = item;
         }
         this.$element.after(item.$element);
-        
-        
     }
-    
+
     open() {
         this.status = "open";
         var current = this.first.next;
@@ -119,9 +129,9 @@ class Menu {
             });
             iterator++;
             current = current.next;
-        }    
+        }
     }
-    
+
     close() {
         this.status = "closed";
         var current = this.first.next;
@@ -138,7 +148,7 @@ class Menu {
             current = current.next;
         }
     }
-    
+
     click() {
         if (this.status == "closed") {
             this.open();
@@ -146,15 +156,14 @@ class Menu {
             this.close();
         }
     }
-    
 }
 
 var menu = new Menu("#myMenu");
-var item1 = new Item("list", "rgb(255, 180, 192)"); 
-var item2 = new Item("home", "rgb(255, 180, 192)"); 
-var item3 = new Item("graph-pie", "rgb(255, 180, 192)"); 
-var item4 = new Item("graph-bar", "rgb(255, 180, 192)"); 
-var item5 = new Item("social-github", "rgb(255, 180, 192)"); 
+var item1 = new Item("list", "rgb(255, 180, 192)");
+var item2 = new Item("home", "rgb(255, 180, 192)");
+var item3 = new Item("graph-pie", "rgb(255, 180, 192)");
+var item4 = new Item("graph-bar", "rgb(255, 180, 192)");
+var item5 = new Item("social-github", "rgb(255, 180, 192)");
 
 menu.add(item1);
 menu.add(item2);
@@ -171,12 +180,12 @@ $(document).delay(50).queue(function(next) {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    var sakuraTwig1 = document.getElementById('sakuraTwig1'); 
-    var sakuraTwig2 = document.getElementById('sakuraTwig2'); 
+    var sakuraTwig1 = document.getElementById('sakuraTwig1');
+    var sakuraTwig2 = document.getElementById('sakuraTwig2');
     var positions = ['top-left', 'top-right', 'bottom-right', 'bottom-left'];
 
     function getNextPositionIndex(currentIndex) {
-        return (currentIndex + 1) % positions.length; 
+        return (currentIndex + 1) % positions.length;
     }
 
     function changePosition() {
@@ -184,14 +193,14 @@ document.addEventListener('DOMContentLoaded', function() {
         var lastPositionIndex = parseInt(localStorage.getItem('lastPositionIndex') || '-1');
         var nextPositionIndex = getNextPositionIndex(lastPositionIndex);
 
-    
+
         localStorage.setItem('lastPositionIndex', nextPositionIndex.toString());
 
         sakuraTwig1.classList.remove(...positions);
         sakuraTwig2.classList.remove(...positions);
 
         var newPosition1 = positions[nextPositionIndex];
-        var newPosition2 = positions[(nextPositionIndex + 2) % positions.length]; 
+        var newPosition2 = positions[(nextPositionIndex + 2) % positions.length];
 
         sakuraTwig1.classList.add(newPosition1);
         sakuraTwig2.classList.add(newPosition2);
@@ -199,3 +208,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     changePosition();
 });
+
+$(".item").css("transition", "transform 0.3s");
+$(".item").hover(
+    function() {
+        $(this).css("transform", "scale(1.2)");
+    },
+    function() {
+        $(this).css("transform", "scale(1)");
+    }
+);
