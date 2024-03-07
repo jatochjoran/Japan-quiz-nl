@@ -169,3 +169,33 @@ $(document).delay(50).queue(function(next) {
         next();
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var sakuraTwig1 = document.getElementById('sakuraTwig1'); 
+    var sakuraTwig2 = document.getElementById('sakuraTwig2'); 
+    var positions = ['top-left', 'top-right', 'bottom-right', 'bottom-left'];
+
+    function getNextPositionIndex(currentIndex) {
+        return (currentIndex + 1) % positions.length; 
+    }
+
+    function changePosition() {
+
+        var lastPositionIndex = parseInt(localStorage.getItem('lastPositionIndex') || '-1');
+        var nextPositionIndex = getNextPositionIndex(lastPositionIndex);
+
+    
+        localStorage.setItem('lastPositionIndex', nextPositionIndex.toString());
+
+        sakuraTwig1.classList.remove(...positions);
+        sakuraTwig2.classList.remove(...positions);
+
+        var newPosition1 = positions[nextPositionIndex];
+        var newPosition2 = positions[(nextPositionIndex + 2) % positions.length]; 
+
+        sakuraTwig1.classList.add(newPosition1);
+        sakuraTwig2.classList.add(newPosition2);
+    }
+
+    changePosition();
+});
