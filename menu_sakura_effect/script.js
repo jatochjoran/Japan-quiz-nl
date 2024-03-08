@@ -1,7 +1,7 @@
 var timeOut;
 
 class Item {
-    constructor(icon, backgroundColor) {
+    constructor(icon, backgroundColor, link) {
         this.$element = $(document.createElement("div"));
         this.icon = icon;
         this.$element.addClass("item");
@@ -12,6 +12,10 @@ class Item {
         this.prev = null;
         this.next = null;
         this.isMoving = false;
+        this.link = link;
+        this.$element.on("click", () => {
+            window.location.href = this.link;
+        })
         var element = this;
         this.$element.on("mouseenter", function() {
             clearTimeout(timeOut);
@@ -159,9 +163,9 @@ class Menu {
 }
 
 var menu = new Menu("#myMenu");
-var item1 = new Item("list", "rgb(255, 180, 192)");
-var item2 = new Item("home", "rgb(255, 180, 192)");
-var item3 = new Item("graph-pie", "rgb(255, 180, 192)");
+var item1 = new Item("list", "rgb(255, 180, 192)", "#");
+var item2 = new Item("home", "rgb(255, 180, 192)", "../index/index.html");
+var item3 = new Item("graph-pie", "rgb(255, 180, 192)", "../quizenmenu/quizenmenu.html");
 var item4 = new Item("graph-bar", "rgb(255, 180, 192)");
 var item5 = new Item("social-github", "rgb(255, 180, 192)");
 
