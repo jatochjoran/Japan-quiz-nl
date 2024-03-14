@@ -1,0 +1,138 @@
+html{
+    background-color: rgb(0, 0, 0);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#sakuraTwig1, #sakuraTwig2 {
+    position: fixed;
+    max-width: 800px;
+    animation: fadeIn 2s ease-out;
+    z-index: -3;
+}
+.top-left {
+    top: 0;
+    left: 0;
+    transform: scaleX(-1) scaleY(-1);
+}
+
+.top-right {
+    top: 0;
+    right: 0;
+    transform: scaleY(-1);
+}
+
+.bottom-left {
+    bottom: 0;
+    left: 0;
+    transform: scaleX(-1);
+}
+
+.bottom-right {
+    bottom: 0;
+    right: 0;
+}
+.wrapper {
+  width: 600px;
+  height: 500px;
+  background: #3e304088;
+  margin: 50px auto;
+  border: 5px solid #ff92c4;
+  padding: 20px 50px 50px 50px;
+  border-radius: 20px;
+}
+
+.wrapper h1 {
+	text-align: center;
+	font-family: sans-serif;
+	background: 	#fbb7dd;
+	color: #000000;
+	padding: 3px;
+	border-radius: 5px;
+
+}
+
+.wrapper #question {
+	font-family: sans-serif;
+	font-size: 30px;
+	color:#e9b1cd;
+}
+
+.buttons {
+	margin-top: 30px;
+}
+
+#btn0,#btn1,#btn2,#btn3 {
+	background-color: #e9b1cd;
+	width: 250px;
+	font-size: 20px;
+	color: #1e1e1e;
+	border: 1px solid #1d3c6a;
+	padding: 10px;
+	margin: 10px 40px 10px 0;
+	border-radius: 50px;
+	
+}
+#btn0:hover,#btn1:hover,#btn2:hover,#btn3:hover {
+	background: #ff92c4;
+	cursor: pointer;
+}
+
+#btn0:focus,#btn1:focus,#btn2:focus,#btn3:focus {
+	outline:0;
+}
+
+#progress {
+	font-size: 18px;
+	color: #e9b1cd;
+}
+
+.progress-number {
+	padding: 2px;
+	border: 1px solid #bf8065;
+	background-color: #ff92c4;
+	height: 25px;
+	width: 25px;
+	vertical-align: middle;
+	text-align: center;
+	border-radius: 50%;
+	color: #000000; 
+	display: inline-block;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+.main__heading {
+  color: #ffb3ff;
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  background-color: #ffe6ff;
+  margin: 0 auto;
+}
+
+.main__heading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  z-index: -1;
+}
+
+
+
+
+  
