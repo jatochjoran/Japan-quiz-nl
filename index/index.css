@@ -11,9 +11,9 @@
     color: white;
     font-weight: bold;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    padding: 10px 0; /* Adjust padding to reduce space above and below the text */
-    margin: 0; /* Reset margin to ensure no extra space */
-    line-height: 1; /* Set line height to normal */
+    padding: 10px 0;
+    margin: 0;
+    line-height: 1;
     border-radius: 20px;
 }
 
@@ -31,8 +31,80 @@
     color: white;
     font-weight: bold;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    padding: 10px 0; /* Adjust padding to reduce space above and below the text */
-    margin: 0; /* Reset margin to ensure no extra space */
-    line-height: 1; /* Set line height to normal */
+    padding: 10px 0;
+    margin: 0;
+    line-height: 1;
     border-radius: 20px;
+}
+
+
+body {
+	margin: 0;
+	padding: 0;
+ background: #000
+
+}
+.circle
+{
+	position: absolute;top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 150px;
+	height: 150px;
+	background: rgb(255, 158, 174);
+	border: 5px solid 4985s;
+	box-shadow: 0 3px 10px 5px rgb(255, 158, 174);
+	border-radius: 50%;
+	overflow: hidden;
+
+}
+.wave
+{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background: rgb(255, 158, 174);
+	border-radius: 50%;
+	box-shadow: inset 0 0 50px rgba(255, 166, 181, 0.801);
+box-shadow: 0 0 0 4px  rgba(255, 158, 174, 0.295), 0 0 0 5px rgba(255, 158, 174, 0.267),inset 0 0 10px rgba(255, 158, 174, 0.445), 0 5px 20px rgba(255, 158, 174, 0.418), inset 0 0 15px rgba(255, 158, 174, 0.404);
+}
+.wave:before,
+.wave:after
+{
+	content: '';
+	position: absolute;
+	width: 200%;
+	height:	200%;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%,-75%);
+	
+
+}
+.wave:before
+{
+	border-radius: 45%;
+	background: rgba(255, 152, 169, 0.7);
+	animation: animate 5s linear infinite;
+	box-shadow: 0 0 2px rgba(255, 158, 174, 0.479),0 0 0 4px  rgba(255, 158, 174, 0.363), 0 0 0 5px rgba(255, 158, 174, 0.479),inset 0 0 10px rgba(0,0,0,1), 0 5px 20px rgba(0,0,0,5), inset 0 0 15px rgba(0,0,0,.2);
+
+}
+
+.wave:after
+{
+	border-radius: 40%;
+	background: rgb(255, 173, 186);
+	animation: animate 5s linear infinite;
+}
+
+@keyframes animate
+ {
+	0%
+	{
+		transform: translate(-50%,-75%) rotate(100deg);
+	}
+	100%
+	{
+		transform: translate(-50%,-75%) rotate(360deg);
+	}
 }
