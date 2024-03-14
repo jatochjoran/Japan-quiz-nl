@@ -6,5 +6,5 @@ $(document).ready(function() {
             // Show the content after the loading screen is hidden
             $("#content2").fadeIn("slow");
         });
-    }, 5000);
+    }, 3000);
 });

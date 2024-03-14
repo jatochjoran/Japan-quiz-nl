@@ -127,7 +127,7 @@ class Menu {
         while (current != null) {
             anime({
                 targets: current.$element[0],
-                left: parseInt(head.$element.css("left"), 10) + (sens * (iterator * 50)),
+                left: parseInt(head.$element.css("left"), 10) + (sens * (iterator * 100)),
                 top: head.$element.css("top"),
                 duration: 500
             });
@@ -135,6 +135,7 @@ class Menu {
             current = current.next;
         }
     }
+    
 
     close() {
         this.status = "closed";
