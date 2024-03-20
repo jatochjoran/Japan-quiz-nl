@@ -127,7 +127,7 @@ class Menu {
         while (current != null) {
             anime({
                 targets: current.$element[0],
-                left: parseInt(head.$element.css("left"), 10) + (sens * (iterator * 100)),
+                left: parseInt(head.$element.css("left"), 10) + (sens * (iterator * 70)),
                 top: head.$element.css("top"),
                 duration: 500
             });
@@ -166,8 +166,8 @@ class Menu {
 var menu = new Menu("#myMenu");
 var item1 = new Item("list", "rgb(255, 180, 192)", "#");
 var item2 = new Item("home", "rgb(255, 180, 192)", "../index/index.html");
-var item3 = new Item("graph-pie", "rgb(255, 180, 192)", "../quizenmenu/quizenmenu.html");
-var item4 = new Item("graph-bar", "rgb(255, 180, 192)");
+var item3 = new Item("graph-pie", "rgb(255, 180, 192)", "../quizmenu/quizenmenu.html");
+var item4 = new Item("graph-bar", "rgb(255, 180, 192)", "../leaderboard/index.html");
 var item5 = new Item("social-github", "rgb(255, 180, 192)");
 
 menu.add(item1);

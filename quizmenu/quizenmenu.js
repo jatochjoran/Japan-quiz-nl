@@ -50,7 +50,7 @@ $(document).ready(function() {
       $(".circle").fadeOut("slow", function() {
           $("#content2").fadeIn("slow");
       });
-  }, 3000);
+  }, 1500);
 });
 
 
