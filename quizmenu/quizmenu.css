@@ -85,6 +85,7 @@ ul {
   display: flex;
   flex-wrap: wrap;
   gap: 2.5em;
+  justify-content: center; /* Add this line */
 }
 
 .card {
@@ -302,3 +303,7 @@ box-shadow: 0 0 0 4px  rgba(255, 158, 174, 0.295), 0 0 0 5px rgba(255, 158, 174,
       transform: translate(-50%,-75%) rotate(360deg);
   }
 }
+
+
+
+  
