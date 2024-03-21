@@ -143,10 +143,32 @@ function Question(text, choices, answer) {
   
   function showFeedback(isCorrect) {
     var feedback = document.getElementById("feedback");
-    feedback.innerHTML = isCorrect ? "Correct!" : "Incorrect!";
-    feedback.className = isCorrect ? "correct" : "incorrect";
+    if (isCorrect) {
+        feedback.classList.remove("incorrect");
+        feedback.classList.add("correct");
+        feedback.style.animation = "slideIn 1s forwards";
+
+        setTimeout(function () {
+            feedback.style.animation = "slideOut 1s forwards";
+            feedback.classList.remove("correct");
+        }, 1000);
+    } else {
+        feedback.classList.remove("correct");
+        feedback.classList.add("incorrect");
+        feedback.style.animation = "slideIn 1s forwards";
+
+        setTimeout(function () {
+            feedback.style.animation = "slideOutRed 1s forwards";
+
+            setTimeout(function () {
+                feedback.classList.remove("incorrect");
+                feedback.classList.add("correct");
+            }, 1000);
+        }, 1000);
+    }
 }
-  
+
+
   function hideFeedback() {
     var feedback = document.getElementById("feedback");
     feedback.innerHTML = "";
