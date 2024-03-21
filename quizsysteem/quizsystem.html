@@ -2,49 +2,44 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quizen</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-list.svg"
-    />
-    <link rel="stylesheet" href="quizensystem.css" />
-    <link rel="stylesheet" href="../menu_sakura_effect/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quizen</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-list.svg" />
+  <link rel="stylesheet" href="quizensystem.css" />
+  <link rel="stylesheet" href="../Menu/style.css">
 </head>
+
 <body>
-    <img src="../fotos/sakura.png" id="sakuraTwig1" alt="Sakura Twig">
-    <img src="../fotos/sakura.png" id="sakuraTwig2" alt="Sakura Twig">
-    <div class="center menu">
-        <div id="myMenu"></div>
+  <img src="../img/sakura.png" id="sakuraTwig1" alt="Sakura Twig">
+  <img src="../img/sakura.png" id="sakuraTwig2" alt="Sakura Twig">
+  <div class="center menu">
+    <div id="myMenu"></div>
+  </div>
+
+  <div class="wrapper">
+    <div id="quiz">
+      <h1>HTML Quiz</h1>
+      <hr style="margin-bottom: 30px;">
+      <p id="question"></p>
+
+      <div class="buttons">
+        <button id="btn0"><span id="choice0"></span></button>
+        <button id="btn1"><span id="choice1"></span></button>
+        <button id="btn2"><span id="choice2"></span></button>
+        <button id="btn3"><span id="choice3"></span></button>
       </div>
-  
-      <div class="wrapper">
-        <div id="quiz">
-          <h1>HTML Quiz</h1>
-          <hr style="margin-bottom: 30px;">
-          <p id="question"></p> 
-    
-          <div class="buttons"> 
-            <button id="btn0"><span id="choice0"></span></button> 
-            <button id="btn1"><span id="choice1"></span></button>
-            <button id="btn2"><span id="choice2"></span></button>
-            <button id="btn3"><span id="choice3"></span></button>
-          </div>
-          <hr style="margin-top: 60px;">
-          <footer>
-            <p id="progress"></p> 
-          </footer>
-        </div>
-      </div>
-      <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/1.0.0/anime.js"></script>
-    <script src="quizsystem.js"></script>
-    <script src="../menu_sakura_effect/script.js"></script>
+      <hr style="margin-top: 60px;">
+      <footer>
+        <p id="progress"></p>
+      </footer>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/1.0.0/anime.js"></script>
+  <script src="quizsystem.js"></script>
+  <script src="../Menu/script.js"></script>
 </body>
 </head>

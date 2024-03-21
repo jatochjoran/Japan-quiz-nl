@@ -165,9 +165,9 @@ class Menu {
 
 var menu = new Menu("#myMenu");
 var item1 = new Item("list", "rgb(255, 180, 192)", "#");
-var item2 = new Item("home", "rgb(255, 180, 192)", "../index/index.html");
-var item3 = new Item("graph-pie", "rgb(255, 180, 192)", "../quizmenu/quizenmenu.html");
-var item4 = new Item("graph-bar", "rgb(255, 180, 192)", "../leaderboard/index.html");
+var item2 = new Item("home", "rgb(255, 180, 192)", "../Index/index.html");
+var item3 = new Item("question", "rgb(255, 180, 192)", "../Quizmenu/quizenmenu.html");
+var item4 = new Item("graph-bar", "rgb(255, 180, 192)", "../Leaderboard/index.html");
 var item5 = new Item("social-github", "rgb(255, 180, 192)");
 
 menu.add(item1);

@@ -37,7 +37,7 @@ html{
 }
 .wrapper {
   width: 600px;
-  height: 500px;
+  height: auto;
   background: #3e304088;
   margin: 50px auto;
   border: 5px solid #ff92c4;

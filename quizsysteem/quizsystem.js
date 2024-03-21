@@ -88,7 +88,7 @@ function showProgress() {
 
 function showScores() {
 	var gameOver = "<h1>Result</h1>";  
-	 gameOver += "<h2 id='score' style='text-align:center;'>Your Score: " + quiz.score + "</h2>";
+	gameOver += "<h2 id='score' style='text-align:center; color:white;'>Your Score: " + quiz.score + "</h2>";
 	var element = document.getElementById("quiz");
 	element.innerHTML = gameOver;
 
