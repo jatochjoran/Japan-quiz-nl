@@ -125,7 +125,7 @@ function Question(text, choices, answer) {
       }
   
       showProgress();
-      hideFeedback(); // Verberg feedback bij het laden van een nieuwe vraag
+      hideFeedback(); 
     }
   }
   
@@ -151,7 +151,7 @@ function Question(text, choices, answer) {
         setTimeout(function () {
             feedback.style.animation = "slideOut 1s forwards";
             feedback.classList.remove("correct");
-        }, 1000);
+        }, 760);
     } else {
         feedback.classList.remove("correct");
         feedback.classList.add("incorrect");
@@ -163,8 +163,8 @@ function Question(text, choices, answer) {
             setTimeout(function () {
                 feedback.classList.remove("incorrect");
                 feedback.classList.add("correct");
-            }, 1000);
-        }, 1000);
+            }, 750);
+        }, 750);
     }
 }
 
