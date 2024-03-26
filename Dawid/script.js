@@ -29,86 +29,61 @@ function Question(text, choices, answer) {
   
     this.questionIndex++;
   };
-  
   var questions = [
     new Question(
-      "Wie was de eerste keizer van Japan?",
-      ["Keizer Hirohito", "Keizer Meiji", "Keizer Jimmu", "Keizer Akihito"],
-      "Keizer Jimmu"
+      "Welke berg wordt beschouwd als de heiligste berg van Japan?",
+      ["Mount Fuji", "Mount Everest", "Mount Kilimanjaro", "Mount Rainier"],
+      "Mount Fuji"
     ),
     new Question(
-      "Welke gebeurtenis markeert het begin van de Japanse feodale periode?",
-      [
-        "De slag bij Sekigahara",
-        "De bouw van de eerste keizerlijke paleizen",
-        "De komst van het boeddhisme in Japan",
-        "De val van de Heian-periode",
-      ],
-      "De val van de Heian-periode"
+      "Wat is de hoofdstad van Japan?",
+      ["Tokyo", "Kyoto", "Osaka", "Hiroshima"],
+      "Tokyo"
     ),
     new Question(
-      "Wat was de belangrijkste oorzaak van de val van het Tokugawa-shogunaat?",
-      [
-        "Een invasie van Mongoolse troepen",
-        "Binnenlandse opstanden van boeren en samurai",
-        "De aankomst van Amerikaanse oorlogsschepen onder leiding van Commodore Perry",
-        "Een epidemie van de Zwarte Dood",
-      ],
-      "De aankomst van Amerikaanse oorlogsschepen onder leiding van Commodore Perry"
+      "Welk type theater wordt gekenmerkt door traditionele Japanse podiumkunsten?",
+      ["Kabuki", "Opera", "Ballet", "Broadway"],
+      "Kabuki"
     ),
     new Question(
-      "Wie was de leider van de gewelddadige opstand tegen het Tokugawa-shogunaat in 1868?",
-      ["Oda Nobunaga", "Emperor Meiji", "Toyotomi Hideyoshi", "Tokugawa Ieyasu"],
-      "Emperor Meiji"
+      "Wat is een traditionele Japanse theeceremonie bekend als?",
+      ["Sushi", "Sake", "Kaiseki", "Chanoyu"],
+      "Chanoyu"
     ),
     new Question(
-      "Welke invloedrijke Japanner is verantwoordelijk voor de oprichting van het Kamakura-shogunaat?",
-      [
-        "Minamoto no Yoshitsune",
-        "Minamoto no Yoritomo",
-        "Taira no Kiyomori",
-        "Hojo Tokimune",
-      ],
-      "Minamoto no Yoritomo"
+      "Welke traditionele Japanse kunstvorm maakt gebruik van vouwen en papier?",
+      ["Origami", "Calligrafie", "Sumi-e", "Ukiyo-e"],
+      "Origami"
     ),
     new Question(
-      "Tijdens welke periode werd Japan bestuurd door een militaire dictatuur bekend als het Kamakura-shogunaat?",
-      ["Nara-periode", "Heian-periode", "Kamakura-periode", "Edo-periode"],
-      "Kamakura-periode"
+      "Wat is de naam van de traditionele Japanse kleding?",
+      ["Yukata", "Kimono", "Hakama", "Obi"],
+      "Kimono"
     ),
     new Question(
-      "Wat was de belangrijkste reden voor de opening van Japan voor buitenlandse handel in de 19e eeuw?",
-      [
-        "De Japanse hongersnood van 1833",
-        "De interesse van Japan in westerse technologie",
-        "De dreiging van Amerikaanse kanonneerboten",
-        "Het verlangen naar exotische producten uit Europa",
-      ],
-      "De dreiging van Amerikaanse kanonneerboten"
+      "Welke Japanse stad staat bekend om zijn neonverlichte uitgaanswijk en entertainment?",
+      ["Shibuya", "Akihabara", "Ginza", "Shinjuku"],
+      "Shinjuku"
     ),
     new Question(
-      "Welke Japanse stad werd op 6 augustus 1945 getroffen door een atoombom?",
-      ["Nagoya", "Hiroshima", "Nagasaki", "Kyoto"],
-      "Hiroshima"
+      "Wat is de naam van de traditionele Japanse architectuur met een kenmerkend schuin dak?",
+      ["Pagode", "Teepee", "Yurt", "Pagoda"],
+      "Pagode"
     ),
     new Question(
-      "Welke gebeurtenis markeert het einde van de Edo-periode en het begin van de Meiji-restauratie?",
-      [
-        "De aankomst van Portugese handelaren in Japan",
-        "De val van het Ming-dynastie in China",
-        "De Boshin-oorlog",
-        "De bouw van de Tokugawa-paleizen",
-      ],
-      "De Boshin-oorlog"
+      "Welke Japanse keuken staat bekend om zijn gegrilde gerechten?",
+      ["Yakiniku", "Sushi", "Tempura", "Ramen"],
+      "Yakiniku"
     ),
     new Question(
-      "Wie was de eerste buitenlandse missionaris die naar Japan reisde en het christendom introduceerde?",
-      ["St. Francis Xavier", "Marco Polo", "Matteo Ricci", "Vasco da Gama"],
-      "Matteo Ricci"
+      "Wat is de naam van de traditionele Japanse muziekinstrumentenensemble?",
+      ["Shakuhachi", "Koto", "Shamisen", "Taiko"],
+      "Taiko"
     ),
   ];
-  
-  var quiz = new Quiz(questions);
+
+var quiz = new Quiz(questions);
+
   
   function populate() {
     if (quiz.isEnded()) {
@@ -151,7 +126,7 @@ function Question(text, choices, answer) {
         setTimeout(function () {
             feedback.style.animation = "slideOut 1s forwards";
             feedback.classList.remove("correct");
-        }, 760);
+        }, 750);
     } else {
         feedback.classList.remove("correct");
         feedback.classList.add("incorrect");
