@@ -30,56 +30,17 @@ function Question(text, choices, answer) {
     this.questionIndex++;
   };
   var questions = [
-    new Question(
-      "Welke berg wordt beschouwd als de heiligste berg van Japan?",
-      ["Mount Fuji", "Mount Everest", "Mount Kilimanjaro", "Mount Rainier"],
-      "Mount Fuji"
-    ),
-    new Question(
-      "Wat is de hoofdstad van Japan?",
-      ["Tokyo", "Kyoto", "Osaka", "Hiroshima"],
-      "Tokyo"
-    ),
-    new Question(
-      "Welk type theater wordt gekenmerkt door traditionele Japanse podiumkunsten?",
-      ["Kabuki", "Opera", "Ballet", "Broadway"],
-      "Kabuki"
-    ),
-    new Question(
-      "Wat is een traditionele Japanse theeceremonie bekend als?",
-      ["Sushi", "Sake", "Kaiseki", "Chanoyu"],
-      "Chanoyu"
-    ),
-    new Question(
-      "Welke traditionele Japanse kunstvorm maakt gebruik van vouwen en papier?",
-      ["Origami", "Calligrafie", "Sumi-e", "Ukiyo-e"],
-      "Origami"
-    ),
-    new Question(
-      "Wat is de naam van de traditionele Japanse kleding?",
-      ["Yukata", "Kimono", "Hakama", "Obi"],
-      "Kimono"
-    ),
-    new Question(
-      "Welke Japanse stad staat bekend om zijn neonverlichte uitgaanswijk en entertainment?",
-      ["Shibuya", "Akihabara", "Ginza", "Shinjuku"],
-      "Shinjuku"
-    ),
-    new Question(
-      "Wat is de naam van de traditionele Japanse architectuur met een kenmerkend schuin dak?",
-      ["Pagode", "Teepee", "Yurt", "Pagoda"],
-      "Pagode"
-    ),
-    new Question(
-      "Welke Japanse keuken staat bekend om zijn gegrilde gerechten?",
-      ["Yakiniku", "Sushi", "Tempura", "Ramen"],
-      "Yakiniku"
-    ),
-    new Question(
-      "Wat is de naam van de traditionele Japanse muziekinstrumentenensemble?",
-      ["Shakuhachi", "Koto", "Shamisen", "Taiko"],
-      "Taiko"
-    ),
+    new Question("Welk eiland is zowel de grootste als de meest bevolkte van de Japanse archipel?", ["Hokkaido", "Kyushu", "Shikoku", "Honshu"], "Honshu"),
+    new Question("Hoe heet het Japanse gerecht van gekookte rijst met rijstazijn, vaak geserveerd met rauwe vis of groenten?", ["Ramen", "Sushi", "Tempura", "Udon"], "Sushi"),
+    new Question("Wat is de naam van de traditionele Japanse theeceremonie?", ["Ikebana", "Origami", "Sado", "Kabuki"], "Sado"),
+    new Question("Wat is de naam van de Japanse animatiestijl die wereldwijd populair is?", ["Manga", "J-Pop", "Hentai", "Anime"], "Anime"),
+    new Question("Waar of niet waar: In Japan is het gebruikelijk om je schoenen uit te doen voordat je iemands huis", ["Waar", "Niet waar"], "waar"),
+  
+    new Question("Noem een traditioneel Japans gerecht dat rauwe vis bevat.", ["Miso soep", "Yakitori", "Takoyaki", "Sashimi"], "Sashimi"),
+    new Question("Wat is de naam van de bloesem die elk voorjaar over heel Japan wordt gevierd, vaak door middel van picknicks onder de bomen?", ["Ume (pruimenbloesem)", "Tsubaki (camellia)", "Sakura (kersenbloesem)", "Ajisai (hortensia)"], "Sakura (kersenbloesem)"),
+    new Question("Wat is de term voor de Japanse stripboeken en grafische romans die wereldwijd populair zijn?", ["Comicbook", "Manga", "Light novel", "Visual novel"], "Manga"),
+    new Question("Waar of niet waar: Sumoworstelen, de nationale sport van Japan, laat alleen mannelijke deelnemers toe.", ["Waar", "Niet waar"], "Waar"),
+    new Question("Hoe wordt de Japanse keizerlijke familie genoemd, die als een van de oudste ononderbroken monarchieën ter wereld wordt beschouwd?", ["Samoerai", "Shogunaat", "Yamato", "Heian"], "Shogunaat"),
   ];
 
 var quiz = new Quiz(questions);
@@ -171,4 +132,6 @@ var quiz = new Quiz(questions);
     var element = document.getElementById("quiz");
     element.innerHTML = gameOver;
   }
+  
+
   
