@@ -236,10 +236,10 @@ function submitScore() {
 
     xhr.onload = function () {
         if (xhr.status >= 200 && xhr.status < 300) {
-            // Je kunt hier feedback geven over het succesvol opslaan van de score
+            // Feedback over succesvol opslaan van de score
             console.log("Score succesvol opgeslagen:", xhr.responseText);
             var element = document.getElementById("quiz");
-            element.innerHTML = "<h2>Bedankt voor het meedoen, " + playerName + "! Je score is opgeslagen.</h2>";
+            element.innerHTML = "<h2 style= 'color:white;'>Bedankt voor het meedoen, " + playerName + "! Je score is opgeslagen.</h2>";
         } else {
             // Foutafhandeling
             console.error("Er is een fout opgetreden: ", xhr.statusText);
@@ -252,3 +252,4 @@ function submitScore() {
 
     xhr.send(data);
 }
+
