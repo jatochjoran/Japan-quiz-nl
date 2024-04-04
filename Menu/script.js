@@ -168,7 +168,7 @@ var item1 = new Item("list", "rgb(255, 180, 192)", "#");
 var item2 = new Item("home", "rgb(255, 180, 192)", "../Index/index.html");
 var item3 = new Item("checkbox", "rgb(255, 180, 192)", "../Quizmenu/quizmenu.html");
 var item4 = new Item("graph-bar", "rgb(255, 180, 192)", "../Leaderboard/index.php");
-var item5 = new Item("social-github", "rgb(255, 180, 192)");
+var item5 = new Item("social-github", "rgb(255, 180, 192)". "https://github.com/jatochjoran/Japan-quiz-nl");
 
 menu.add(item1);
 menu.add(item2);
