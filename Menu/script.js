@@ -184,6 +184,7 @@ $(document).delay(50).queue(function(next) {
     });
 });
 
+
 document.addEventListener('DOMContentLoaded', function() {
     var sakuraTwig1 = document.getElementById('sakuraTwig1');
     var sakuraTwig2 = document.getElementById('sakuraTwig2');
