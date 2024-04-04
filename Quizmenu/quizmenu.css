@@ -67,6 +67,10 @@ ul {
 .main {
   max-width: 75rem;
   padding: 3em 1.5em;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -10%);
 }
 
 .main__heading {
@@ -91,7 +95,7 @@ ul {
 .card {
   --flow-space: 0.5em;
   --hsl: var(--hue), var(--saturation), var(--lightness);
-  flex: 1 1 14rem;
+  flex: 1 1 20rem; 
   padding: 1.5em 2em;
   display: grid;
   grid-template-rows: auto auto auto 1fr;
@@ -303,7 +307,3 @@ box-shadow: 0 0 0 4px  rgba(255, 158, 174, 0.295), 0 0 0 5px rgba(255, 158, 174,
       transform: translate(-50%,-75%) rotate(360deg);
   }
 }
-
-
-
-  
