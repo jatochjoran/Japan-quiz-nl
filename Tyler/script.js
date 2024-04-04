@@ -134,4 +134,28 @@ var quiz = new Quiz(questions);
   }
   
 
-  
+  function submitScore() {
+    var playerName = document.getElementById("playerName").value;
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "connect.php", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+    xhr.onload = function () {
+        if (xhr.status >= 200 && xhr.status < 300) {
+            // Feedback over succesvol opslaan van de score
+            console.log("Score succesvol opgeslagen:", xhr.responseText);
+            var element = document.getElementById("quiz");
+            element.innerHTML = "<h2 style= 'color:white;'>Bedankt voor het meedoen, " + playerName + "! Je score is opgeslagen.</h2>";
+        } else {
+            // Foutafhandeling
+            console.error("Er is een fout opgetreden: ", xhr.statusText);
+        }
+    };
+
+    var data = "playerName=" + encodeURIComponent(playerName) +
+               "&score=" + encodeURIComponent(quiz.score) +
+               "&quizType=" + encodeURIComponent(Quiz_Type);
+
+    xhr.send(data);
+}
+
