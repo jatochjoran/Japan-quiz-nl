@@ -128,7 +128,7 @@ body {
 .info {
     background-color: rgba(255, 158, 174, 0.877);
     width: 30%;
-    height: 5%;
+    height: auto;
     position: absolute;
     top: 20%;
     left: 50%;
@@ -148,7 +148,7 @@ body {
 .leaderboard {
     background-color: rgba(255, 158, 174, 0.877);
     width: 60%;
-    height: 45%;
+    height: auto;
     position: absolute;
     top: 50%;
     left: 50%;
