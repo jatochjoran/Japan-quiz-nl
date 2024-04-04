@@ -34,7 +34,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Name</th>
+                        <th>Naam</th>
                         <th>Score</th>
                         <th>Quiz Type</th>
                     </tr>
@@ -50,7 +50,7 @@
                     if (mysqli_num_rows($result) > 0) {
                         while ($row = mysqli_fetch_assoc($result)) {
                             echo '<tr>';
-                            echo '<td>' . htmlspecialchars($row['Name']) . '</td>';
+                            echo '<td>' . htmlspecialchars($row['Naam']) . '</td>';
                             echo '<td>' . htmlspecialchars($row['Score']) . '</td>';
                             echo '<td>' . htmlspecialchars($row['Quiz_Type']) . '</td>';
                             echo '</tr>';
