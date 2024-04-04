@@ -147,7 +147,7 @@ body {
 
 .leaderboard {
     background-color: rgba(255, 158, 174, 0.877);
-    width: auto;
+    width: 60%;
     height: auto;
     position: absolute;
     top: 50%;
