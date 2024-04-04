@@ -145,7 +145,7 @@ body {
 }
 
 
-.quizinfo {
+.leaderboard {
     background-color: rgba(255, 158, 174, 0.877);
     width: 60%;
     height: 45%;
@@ -164,6 +164,39 @@ body {
     border-radius: 20px;
 }
 
+.leaderboard table {
+  width: 95%;
+  margin: auto;
+  border-collapse: separate; 
+  border-spacing: 0;
+  border-radius: 20px;
+  
+}
 
+.leaderboard th, .leaderboard td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.leaderboard tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
 
   
+.leaderboard th:first-child {
+  border-top-left-radius: 20px;
+}
+
+.leaderboard th:last-child {
+  border-top-right-radius: 20px;
+}
+
+/* ronde corner */
+.leaderboard tr:last-child td:first-child {
+  border-bottom-left-radius: 20px;
+}
+
+.leaderboard tr:last-child td:last-child {
+  border-bottom-right-radius: 20px;
+}
