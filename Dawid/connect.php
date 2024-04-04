@@ -18,5 +18,5 @@ $score = $_POST['score'];
 $quizType = $_POST['quizType'];
 
 // Voer een SQL query uit om de data in te voegen
-$sql = "INSERT INTO jeTabel (Naam, Score, Quiz_Type) VALUES (" . $playerName . ", " . $score . ", " . $quizType . ")";
+$sql = "INSERT INTO leaderboard (Naam, Score, Quiz_Type) VALUES (" . $playerName . ", " . $score . ", " . $quizType . ")";
 ?>
