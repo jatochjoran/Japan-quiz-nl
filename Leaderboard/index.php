@@ -27,31 +27,6 @@
             <div id="myMenu"></div>
         </div>
 
-        <?php
-        require_once 'connect.php';
-
-        $query = "SELECT * FROM leaderboard";
-        $result = mysqli_query($con, $query);
-
-        while ($row = mysqli_fetch_assoc($result)) {
-            ?>
-
-            <p>
-                <?= $row['Naam']; ?>
-            </p>
-            <p>
-                <?= $row['Score']; ?>
-            </p>
-            <p>
-                <?= $row['Quiz_Type']; ?>
-            </p>
-
-            <?php
-
-        }
-
-        ?>
-
         <div class="info">
             <h2>Leaderboard</h2>
         </div>
@@ -65,10 +40,29 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <?php
+                    require_once 'connect.php';
 
+                    $query = "SELECT * FROM leaderboard";
+                    $result = mysqli_query($con, $query);
+
+
+                    if (mysqli_num_rows($result) > 0) {
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            echo '<tr>';
+                            echo '<td>' . htmlspecialchars($row['Name']) . '</td>';
+                            echo '<td>' . htmlspecialchars($row['Score']) . '</td>';
+                            echo '<td>' . htmlspecialchars($row['Quiz_Type']) . '</td>';
+                            echo '</tr>';
+                        }
+                    } else {
+                        echo '<tr><td colspan="3">No data found</td></tr>';
+                    }
+                    ?>
                 </tbody>
             </table>
         </div>
+
 
 
         <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
