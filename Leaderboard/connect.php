@@ -12,3 +12,4 @@ $con = mysqli_connect(
     $database
 );
 
+$sql = "SELECT Naam, Score, Quiz_Type FROM leaderboard ORDER BY Score";
