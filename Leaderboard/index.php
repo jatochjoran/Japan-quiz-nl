@@ -43,7 +43,7 @@
                     <?php
 require_once 'connect.php';
 
-$query = "SELECT * FROM leaderboard ORDER BY Score DESC, Quiz_Type ASC";
+$query = "SELECT * FROM leaderboard ORDER BY Score DESC, Quiz_Type DESC";
 $result = mysqli_query($con, $query);
 
 if (mysqli_num_rows($result) > 0) {
