@@ -41,23 +41,22 @@
                 </thead>
                 <tbody>
                     <?php
-                    require_once 'connect.php';
+require_once 'connect.php';
 
-                    $query = "SELECT * FROM leaderboard";
-                    $result = mysqli_query($con, $query);
+$query = "SELECT * FROM leaderboard ORDER BY Score DESC";
+$result = mysqli_query($con, $query);
 
-
-                    if (mysqli_num_rows($result) > 0) {
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            echo '<tr>';
-                            echo '<td>' . htmlspecialchars($row['Naam']) . '</td>';
-                            echo '<td>' . htmlspecialchars($row['Score']) . '</td>';
-                            echo '<td>' . htmlspecialchars($row['Quiz_Type']) . '</td>';
-                            echo '</tr>';
-                        }
-                    } else {
-                        echo '<tr><td colspan="3">No data found</td></tr>';
-                    }
+if (mysqli_num_rows($result) > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo '<tr>';
+        echo '<td>' . htmlspecialchars($row['Naam']) . '</td>';
+        echo '<td>' . htmlspecialchars($row['Score']) . '</td>';
+        echo '<td>' . htmlspecialchars($row['Quiz_Type']) . '</td>';
+        echo '</tr>';
+    }
+} else {
+    echo '<tr><td colspan="3">No data found</td></tr>';
+}
                     ?>
                 </tbody>
             </table>
