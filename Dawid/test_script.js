@@ -239,7 +239,7 @@ function submitScore() {
             // Feedback over succesvol opslaan van de score
             console.log("Score succesvol opgeslagen:", xhr.responseText);
             var element = document.getElementById("quiz");
-            element.innerHTML = "<h2 style= 'color:white;'>Bedankt voor het meedoen, " + playerName + "! Je score is opgeslagen.</h2>";
+            element.innerHTML = "<h2 style= 'color:white;'>Bedankt voor het meedoen, " + playerName + "! Je score: " + quiz.score + " </h2>";
         } else {
             // Foutafhandeling
             console.error("Er is een fout opgetreden: ", xhr.statusText);
